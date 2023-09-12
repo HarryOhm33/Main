@@ -9,9 +9,10 @@ body {
 } */
 
 .main-body {
-  /* background: url("/images/b-background.jpeg"); */
-  background-color: blanchedalmond;
+  background: url("/images/background.jpg");
+  /* background-color: blanchedalmond; */
   background-size: 100% 100%;
+  color: white;
 }
 
 .p-1 {

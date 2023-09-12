@@ -1,8 +1,23 @@
+html {
+  margin: 0;
+  height: 100%;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-align: center;
+  height: 100%;
+}
+
+.main-body {
+  height: 100%;
+  background: url("/images/background.jpg");
+  /* background-color: blanchedalmond; */
+  background-size: 100% 100%;
+  color: white;
+  height: 100%;
 }
 
 .about-para {
@@ -10,6 +25,8 @@ body {
   margin: 2rem auto;
   padding: 1rem;
   /* border: 2px solid black; */
+
+  font-weight: 500;
 }
 
 .footer {

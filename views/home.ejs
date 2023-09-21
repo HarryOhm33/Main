@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samarpan</title>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
     <link rel="icon" href="./Pics/top-logo.jpeg.jpg" />
     <link
       rel="stylesheet"
@@ -16,14 +17,63 @@
 
     <div class="main-body">
       <div class="p-1">
-        <div class="w-note">
-          <p>
+        <div class="w-note d-flex">
+          <span>
             Welcome to Samarpan <br />
-            A Step Taken To Backbone Local Start-Ups
-          </p>
+            A step taken to Backbone
+            <p id="typedjs"></p
+          ></span>
         </div>
 
-        <div class="slide-show"><img src="/images/home-pic.jpg" /></div>
+        <div class="slide-show">
+          <div
+            id="carouselExampleAutoplaying"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="2000"
+          >
+            <!-- Set data-bs-interval to control time delay (3 seconds in this example) -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="/images/home-pic.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img src="/images/home2.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img src="/images/home3.jpg" class="d-block w-100" alt="..." />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
       </div>
 
       <h2 class="division-heading"><u>Jammu Division</u></h2>
@@ -31,25 +81,43 @@
       <div class="cards-container">
         <% for (let district of jammu) {%>
 
-        <div onclick="location.href='/<%= district.name %>'" class="card">
+        <div
+          onclick="location.href='/<%= district.name %>'"
+          class="card"
+          id="<%= district.name %>"
+        >
           <%= district.name %>
         </div>
         <% } %>
-      </div>
 
-      <h2 class="division-heading"><u>Kashmir Division</u></h2>
+        <h2 class="division-heading"><u>Kashmir Division</u></h2>
 
-      <div class="cards-container">
-        <% for (let district of kashmir) {%>
+        <div class="cards-container">
+          <% for (let district of kashmir) {%>
 
-        <div onclick="location.href='/<%= district.name %>'" class="card">
-          <%= district.name %>
+          <div
+            onclick="location.href='/<%= district.name %>'"
+            class="card"
+            id="<%= district.name %>"
+          >
+            <%= district.name %>
+          </div>
+          <% } %>
         </div>
-        <% } %>
       </div>
     </div>
 
     <%- include("includes/footer.ejs"); %>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      var typed = new Typed("#typedjs", {
+        strings: ["Local Startups", "Sellers", "Culture"],
+        typeSpeed: 70,
+        loop: true,
+        showCursor: false,
+        smartBackspace: true,
+      });
+    </script>
   </body>
 </html>

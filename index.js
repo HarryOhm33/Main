@@ -38,9 +38,9 @@ app.get("/login/forget_pass", (req, res) => {
 });
 
 app.get("/:district", (req, res) => {
-  let { district } = req.params;
-  let districtInfo = districts.find((d) => district === d.name);
-  res.render("district.ejs", { districtInfo });
+  // let { district } = req.params;
+  // let districtInfo = districts.find((d) => district === d.name);
+  res.send("We are currently working on this");
 });
 
 app.listen(port, () => {

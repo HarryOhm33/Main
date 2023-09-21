@@ -14,6 +14,9 @@ body {
   background-size: 100% 100%;
   color: white;
 }
+a {
+  text-decoration: none;
+}
 
 .p-1 {
   /* border: 2px solid black; */
@@ -21,6 +24,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  /* width: 90%; */
 }
 
 .w-note {
@@ -56,7 +60,15 @@ body {
 
 .division-heading {
   text-align: center;
+  display: inline-block;
+  margin-left: 40vw;
+  width: 300px;
+  height: 50px;
+  border-radius: 5px;
   margin-top: 1rem;
+  background-color: #25001bff;
+  opacity: 0.5;
+  color: cyan;
 }
 
 .cards-container {
@@ -122,4 +134,65 @@ body {
     width: 23.5rem;
     flex: none;
   }
+}
+/* =============/images/maps=================== */
+#Kathua {
+  background-image: url(/images/maps/kathua.jpeg);
+}
+#Jammu {
+  background-image: url(/images/maps/jammu.webp);
+}
+#Samba {
+  background-image: url(/images/maps/samba.jpg);
+}
+#Udhampur {
+  background-image: url(/images/maps/udhampur.jpeg);
+}
+#Reasi {
+  background-image: url(/images/maps/reasi.jpg);
+}
+#Rajouri {
+  background-image: url(/images/maps/rajouri.jpg);
+}
+#Doda {
+  background-image: url(/images/maps/doda.jpeg);
+}
+#Poonch {
+  background-image: url(/images/maps/poonch.jpeg);
+}
+#Ramban {
+  background-image: url(/images/maps/ramban.jpeg);
+}
+#Kishtawar {
+  background-image: url(/images/maps/kishtawar.jpeg);
+}
+#Anantnag {
+  background-image: url(/images/maps/anantnag.jpeg);
+}
+#Kulgam {
+  background-image: url(/images/maps/kulgam.jpeg);
+}
+#Pulwama {
+  background-image: url(/images/maps/pulwama.jpeg);
+}
+#Shopian {
+  background-image: url(/images/maps/shopiyan.jpg);
+}
+#Budgam {
+  background-image: url(/images/maps/budgam.jpeg);
+}
+#Srinagar {
+  background-image: url(/images/maps/srinagar.jpeg);
+}
+#Ganderbal {
+  background-image: url(/images/maps/ganderbal.jpeg);
+}
+#Bandipora {
+  background-image: url(/images/maps/bandipora.jpeg);
+}
+#Baramulla {
+  background-image: url(/images/maps/baramula.jpeg);
+}
+#Kupwara {
+  background-image: url(/images/maps/kupwara.jpeg);
 }

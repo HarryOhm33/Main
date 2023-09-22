@@ -44,6 +44,7 @@ body {
   padding: 0.5rem;
   cursor: pointer;
   caret-color: transparent;
+  transition: all 0.3s ease;
 }
 
 .rows:hover {

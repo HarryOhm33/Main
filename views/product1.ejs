@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spice Product 1 - District Kathua</title>
+    <!-- Include Bootstrap CSS from a CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Add custom CSS for styling (optional) -->
+    <style>
+      /* Add your custom CSS styles here */
+      .review {
+        display: flex;
+        align-items: center;
+      }
+
+      .review-content {
+        margin-left: 20px;
+      }
+
+      .map-container {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <!-- Include the navigation bar as in your previous code -->
+
+    <!-- Product Page -->
+    <div class="container my-5">
+      <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-6">
+          <img
+            src="/images/district-img/final1.jpeg"
+            alt="Spice Product 1"
+            class="img-fluid"
+            style="width: 500px; height: auto"
+          />
+        </div>
+        <!-- Product Details -->
+        <div class="col-md-6">
+          <h1>Spice Product 1</h1>
+          <p class="lead">Premium Spice from District Kathua</p>
+          <h2 class="text-success">&#x20B9; 249.75</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non
+            justo sit amet tellus commodo efficitur.
+          </p>
+          <!-- Add specifications or additional product details here -->
+          <h3>Specifications:</h3>
+          <ul>
+            <li>
+              Weight:
+              <input
+                style="width: 100px"
+                type="number"
+                name="weight"
+                id="weight"
+                value="250"
+                step="10"
+                placeholder="100"
+              />
+              grams
+            </li>
+            <li>Origin: District Kathua, India</li>
+            <!-- Add more specifications as needed -->
+          </ul>
+          <!-- Buy Button -->
+          <button class="btn btn-primary">Add to Cart</button>
+          <button class="btn btn-warning mx-3">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="container my-5">
+      <h2>Customer Reviews</h2>
+      <!-- Single Review -->
+      <div class="review">
+        <img
+          src="/images/district-img/avatar.jpg"
+          class="mr-3"
+          alt="User Avatar"
+          width="64"
+          height="64"
+        />
+        <div class="review-content">
+          <h5 class="mt-0">Customer Name</h5>
+          <p>
+            The shop was good, spices were of premium quality. I am happy with
+            the shop
+          </p>
+        </div>
+      </div>
+      <div class="review">
+        <img
+          src="/images/district-img/avatar.jpg"
+          class="mr-3"
+          alt="User Avatar"
+          width="64"
+          height="64"
+        />
+        <div class="review-content">
+          <h5 class="mt-0">Customer Name</h5>
+          <p>
+            The shop was good, spices were of premium quality. I am happy with
+            the shop
+          </p>
+        </div>
+      </div>
+      <!-- Repeat for more reviews -->
+    </div>
+
+    <!-- Google Maps -->
+    <div class="container my-5 map-container">
+      <h2>Seller Location</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d795.089749437707!2d75.52183784824834!3d32.37968177351805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391c707964ef295d%3A0xb51058c9d91bcddf!2sEasyday%20Club!5e0!3m2!1sen!2sin!4v1695316563617!5m2!1sen!2sin"
+        width="100%"
+        height="400"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <!-- Footer Section -->
+    <!-- Include the footer section as in your previous code -->
+
+    <!-- Include Bootstrap JavaScript (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      // Check if the Geolocation API is available in the browser
+      if ("geolocation" in navigator) {
+        // Get the user's location
+        navigator.geolocation.getCurrentPosition(
+          function (position) {
+            // Extract latitude and longitude
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            // Display the coordinates on the webpage
+            document.getElementById("latitude").textContent = latitude;
+            document.getElementById("longitude").textContent = longitude;
+          },
+          function (error) {
+            // Handle errors (e.g., user denies location access)
+            console.error("Error getting user location:", error);
+          }
+        );
+      } else {
+        // Geolocation API is not available
+        console.error("Geolocation is not available in this browser.");
+      }
+    </script>
+    <script src="/js/product.js"></script>
+  </body>
+</html>

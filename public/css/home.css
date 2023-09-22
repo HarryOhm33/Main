@@ -60,7 +60,7 @@ a {
 
 .division-heading {
   text-align: center;
-  display: inline-block;
+  display: block;
   margin-left: 40vw;
   width: 300px;
   height: 50px;
@@ -70,6 +70,10 @@ a {
   opacity: 0.5;
   color: cyan;
 }
+/* #division-head {
+  display: flex;
+  align-items: center;
+} */
 
 .cards-container {
   width: 100%;
@@ -80,8 +84,9 @@ a {
 
 .card {
   height: 14rem;
-  width: 12rem;
+  width: 10rem;
   margin: 2rem;
+  padding: 0;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -90,17 +95,36 @@ a {
   /* background: url("./Pics/c-background.jpeg"); */
   background-size: 100% 100%;
   color: red;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   cursor: pointer;
   caret-color: transparent;
+  transition: all 0.3s linear;
 }
+
+/* .card p {
+  position: absolute;
+  bottom: -100px;
+
+  width: 100%;
+  background-color: blue;
+  text-align: center;
+  margin: 0;
+  border-radius: 0 0 10px 10px;
+  transition: all 1s linear;
+} */
 
 .card:hover {
   margin: 1.5rem;
   height: 15rem;
-  width: 13rem;
+  width: 11rem;
+  font-size: 2rem;
 }
+
+/* .card:hover p {
+  bottom: 0;
+  height: fit-content;
+} */
 
 .footer {
   height: 1.5rem;

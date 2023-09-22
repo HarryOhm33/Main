@@ -20,7 +20,7 @@
         <div class="w-note d-flex">
           <span>
             Welcome to Samarpan <br />
-            A step taken to Backbone
+            A step taken to
             <p id="typedjs"></p
           ></span>
         </div>
@@ -82,28 +82,30 @@
         <% for (let district of jammu) {%>
 
         <div
-          onclick="location.href='/<%= district.name %>'"
+          onclick="location.href='<%= district.name %>'"
           class="card"
           id="<%= district.name %>"
         >
-          <%= district.name %>
+          <p><%= district.name %></p>
         </div>
         <% } %>
+      </div>
 
-        <h2 class="division-heading"><u>Kashmir Division</u></h2>
+      <h2 class="division-heading">
+        <u>Kashmir Division</u>
+      </h2>
 
-        <div class="cards-container">
-          <% for (let district of kashmir) {%>
+      <div class="cards-container">
+        <% for (let district of kashmir) {%>
 
-          <div
-            onclick="location.href='/<%= district.name %>'"
-            class="card"
-            id="<%= district.name %>"
-          >
-            <%= district.name %>
-          </div>
-          <% } %>
+        <div
+          onclick="location.href='<%= district.name %>'"
+          class="card"
+          id="<%= district.name %>"
+        >
+          <p><%= district.name %></p>
         </div>
+        <% } %>
       </div>
     </div>
 
@@ -112,7 +114,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       var typed = new Typed("#typedjs", {
-        strings: ["Local Startups", "Sellers", "Culture"],
+        strings: ["Promote Local Products", "Support Local Sellers"],
         typeSpeed: 70,
         loop: true,
         showCursor: false,

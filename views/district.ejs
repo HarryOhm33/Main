@@ -3,26 +3,172 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Samarpan</title>
-    <link rel="icon" href="./Pics/top-logo.jpeg.jpg" />
+    <title>District Kathua - Spices</title>
+    <!-- Include Bootstrap CSS from a CDN -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="/css/about.css" />
+    <!-- Add custom CSS for styling (optional) -->
+    <style>
+      /* Add your custom CSS styles here */
+    </style>
   </head>
   <body>
-    <%- include("includes/navbar.ejs"); %>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">District Kathua</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <div class="main-body">
-      <br />
-      <h3>
-        This page belongs to District: <%= district.name %> Division: <%=
-        district.division %>
-      </h3>
-    </div>
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="container text-center">
+        <h1>Welcome to District Kathua</h1>
+        <p>Your Source for Premium Spices</p>
+      </div>
+    </header>
 
-    <%- include("includes/footer.ejs"); %>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container text-center">
+        <img
+          src="images/district-img/kahtua-home.jpg"
+          alt="About Us Image"
+          class="img-fluid rounded"
+        />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non
+          justo sit amet tellus commodo efficitur.
+        </p>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="bg-light py-5">
+      <div class="container">
+        <h2>Our Products</h2>
+        <div class="row">
+          <!-- Product Cards (Repeat this for each product) -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/district-img/product-image1.jpeg"
+                class="card-img-top"
+                alt="Product 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Spice Product 1</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a
+                  href="/<%= districtInfo.name %>/product"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >View retailer</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/district-img/product-image2.jpg"
+                class="card-img-top"
+                alt="Product 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Spice Product 2</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a href="#" class="btn btn-primary">View retailer</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/district-img/product-image3.jpeg"
+                class="card-img-top"
+                alt="Product 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Spice Product 3</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a href="#" class="btn btn-primary">View retailer</a>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat the product cards for more products -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <p>
+              If you have any questions or inquiries, feel free to contact us:
+            </p>
+            <ul>
+              <li>Email: info@example.com</li>
+              <li>Phone: +123 456 789</li>
+              <li>Address: District Kathua, Jammu and Kashmir, India</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <!-- Add a contact form or map here (if needed) -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-3 text-center">
+      <div class="container">
+        &copy; 2023 District Kathua. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Include Bootstrap JavaScript (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

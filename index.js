@@ -154,12 +154,12 @@ app.get("/:district/product", (req, res) => {
   try {
     connection.query("SELECT * FROM districts", (err, result) => {
       if (err) throw err;
-      let districts = result;
+      let dist = result;
 
       function Jammu() {
         let jName = [];
         for (let i = 0; i < 10; i++) {
-          jInfo = districts[i];
+          jInfo = dist[i];
           jName.push(jInfo);
         }
         return jName;
@@ -170,7 +170,7 @@ app.get("/:district/product", (req, res) => {
       function Kashmir() {
         let kName = [];
         for (let i = 10; i < 19; i++) {
-          kInfo = districts[i];
+          kInfo = dist[i];
           kName.push(kInfo);
         }
         return kName;
@@ -178,7 +178,7 @@ app.get("/:district/product", (req, res) => {
 
       let kashmir = Kashmir();
 
-      let dist = jammu.concat(kashmir);
+      let districts = jammu.concat(kashmir);
 
       let districtName = req.params["district"];
       let districtInfo = districts.find((d) => d.name === districtName);
